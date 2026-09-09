@@ -1,0 +1,263 @@
+/* ============================================================================
+   DESIGN TOKENS — extraídos diretamente da identidade visual da logo JF
+   Preto profundo · Azul-marinho escuro · Azul elétrico · Prata/Cromado · Branco
+   ============================================================================ */
+:root {
+  /* --- Base (preto / azul-marinho) --- */
+  --color-void: #03050b;         /* fundo mais profundo da página */
+  --color-bg: #05070f;           /* fundo padrão de seção */
+  --color-bg-alt: #080b18;       /* fundo de seções alternadas */
+  --color-navy-900: #0a0f22;
+  --color-navy-800: #101833;
+  --color-navy-700: #16204a;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-strong: rgba(255, 255, 255, 0.06);
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  /* --- Azul elétrico (cor de destaque da logo) --- */
+  --color-electric-500: #2f8bff;
+  --color-electric-400: #4fa4ff;
+  --color-electric-300: #7fc0ff;
+  --color-electric-600: #1466e0;
+  --color-electric-glow: rgba(47, 139, 255, 0.55);
+
+  /* --- Prata / cromado --- */
+  --color-chrome-100: #f5f7fb;
+  --color-chrome-300: #c9d2e3;
+  --color-chrome-500: #97a3bd;
+  --color-chrome-700: #5b6478;
+
+  /* --- Texto --- */
+  --color-text-primary: #f2f5fb;
+  --color-text-secondary: #aab3c9;
+  --color-text-muted: #717c96;
+
+  /* --- Gradientes --- */
+  --gradient-chrome: linear-gradient(135deg, #f5f7fb 0%, #c9d2e3 35%, #7c8aa8 55%, #e7ecf7 75%, #ffffff 100%);
+  --gradient-electric: linear-gradient(135deg, #7fc0ff 0%, #2f8bff 45%, #1466e0 100%);
+  --gradient-bg-radial: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(47, 139, 255, 0.14), transparent 65%);
+  --gradient-divider: linear-gradient(90deg, transparent, rgba(47, 139, 255, 0.6), transparent);
+
+  /* --- Tipografia --- */
+  --font-display: 'Orbitron', 'Rajdhani', sans-serif;
+  --font-heading: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* --- Espaçamento / layout --- */
+  --section-padding-y: clamp(72px, 12vw, 160px);
+  --container-width: min(1240px, 92vw);
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+
+  /* --- Sombra / glow --- */
+  --shadow-elevated: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+  --shadow-glow-sm: 0 0 24px rgba(47, 139, 255, 0.25);
+  --shadow-glow-md: 0 0 48px rgba(47, 139, 255, 0.3);
+
+  /* --- Timing --- */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.25s;
+  --duration-base: 0.45s;
+
+  color-scheme: dark;
+}
+
+/* ============================================================================
+   RESET
+   ============================================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-void);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Trava o scroll do body enquanto o loader inicial está ativo */
+body.is-loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+::selection {
+  background: var(--color-electric-500);
+  color: #fff;
+}
+
+/* Scrollbar discreta (Webkit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-700);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-void);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-electric-600);
+}
+
+/* Foco visível e acessível em qualquer elemento interativo */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-electric-400);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Esconde o cursor customizado / desativa hover-only quando não há mouse */
+.no-custom-cursor,
+.no-custom-cursor * {
+  cursor: auto !important;
+}
+
+/* ============================================================================
+   LAYOUT HELPERS
+   ============================================================================ */
+.container {
+  width: var(--container-width);
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-padding-y);
+}
+
+.section--alt {
+  background: var(--color-bg-alt);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  z-index: 999;
+  background: var(--color-electric-500);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: top var(--duration-fast) var(--ease-premium);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-electric-400);
+  font-weight: 600;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1.5px;
+  background: var(--gradient-electric);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+.text-gradient-chrome {
+  background: var(--gradient-chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-electric {
+  background: var(--gradient-electric);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

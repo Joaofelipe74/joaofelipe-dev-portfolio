@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# TODO: quando publicar em um domínio definitivo, adicione a URL do sitemap
+# (se você criar um) ou remova esta linha.
+# Sitemap: https://www.joaofelipedev.com.br/sitemap.xml

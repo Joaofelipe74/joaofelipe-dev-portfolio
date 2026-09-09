@@ -1,0 +1,40 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-void);
+  visibility: visible;
+}
+
+.loader__glow {
+  position: absolute;
+  width: min(70vw, 640px);
+  height: min(70vw, 640px);
+  background: radial-gradient(circle, rgba(47, 139, 255, 0.35), transparent 70%);
+  filter: blur(10px);
+  border-radius: 50%;
+}
+
+.loader__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.loader__emblem {
+  width: clamp(80px, 14vw, 130px);
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(47, 139, 255, 0.55));
+}
+
+.loader__wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  letter-spacing: 0.12em;
+}
