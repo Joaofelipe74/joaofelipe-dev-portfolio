@@ -1,6 +1,6 @@
 .projects__showcase {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: clamp(32px, 5vw, 72px);
   align-items: center;
   margin-bottom: 48px;
@@ -52,7 +52,7 @@
 
 /* --- Desktop (monitor) --- */
 .device-mockup--desktop {
-  width: min(640px, 82vw);
+  width: min(640px, 100%);
 }
 
 .device-mockup--desktop .device-mockup__screen {

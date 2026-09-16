@@ -81,9 +81,10 @@ export default function Projects() {
             >
               <div className="device-mockup__glare" aria-hidden="true" />
               {activeProject.device === 'mobile' && <div className="device-mockup__notch" aria-hidden="true" />}
-              <div className="device-mockup__screen">
+              <div className="device-mockup__screen" style={{ aspectRatio: activeProject.screenRatio }}>
                 <img
                   src={activeProject.image}
+                  style={{ objectFit: activeProject.imageFit || 'cover' }}
                   alt={`Prévia do projeto ${activeProject.title}`}
                   loading="lazy"
                   decoding="async"

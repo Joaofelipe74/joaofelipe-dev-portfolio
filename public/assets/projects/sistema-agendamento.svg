@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sistema Inteligente de Gestão e Agendamento</title>
+  <desc id="desc">Prévia visual do sistema da JF Dev com painel administrativo e agendamento online.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#050917"/>
+      <stop offset="0.55" stop-color="#0a1024"/>
+      <stop offset="1" stop-color="#12072b"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#23b8ff"/>
+      <stop offset="1" stop-color="#8a5cff"/>
+    </linearGradient>
+    <radialGradient id="glowBlue">
+      <stop stop-color="#159eea" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#159eea" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple">
+      <stop stop-color="#7c3cff" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#7c3cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000" flood-opacity=".5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="260" cy="170" r="420" fill="url(#glowBlue)"/>
+  <circle cx="1390" cy="770" r="500" fill="url(#glowPurple)"/>
+  <path d="M0 730C330 610 490 840 790 710c325-141 491 36 810-104v294H0Z" fill="#0b1227" opacity=".8"/>
+
+  <g opacity=".16" stroke="#5ccaff">
+    <path d="M0 90h1600M0 180h1600M0 270h1600M0 360h1600M0 450h1600M0 540h1600M0 630h1600M0 720h1600M0 810h1600"/>
+    <path d="M100 0v900M200 0v900M300 0v900M400 0v900M500 0v900M600 0v900M700 0v900M800 0v900M900 0v900M1000 0v900M1100 0v900M1200 0v900M1300 0v900M1400 0v900M1500 0v900"/>
+  </g>
+
+  <g transform="translate(94 82)">
+    <rect width="92" height="92" rx="25" fill="url(#brand)"/>
+    <path d="M24 24h18v39c0 14-8 22-22 22v-16c4 0 6-2 6-7V24Zm32 0h30v16H74v10h11v16H74v19H56V24Z" fill="#fff"/>
+    <text x="116" y="39" fill="#fff" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4">JF DEV</text>
+    <text x="116" y="70" fill="#8090b5" font-family="Arial, sans-serif" font-size="16" letter-spacing="2">SOLUÇÕES DIGITAIS</text>
+  </g>
+
+  <g transform="translate(100 250)">
+    <text fill="#e8f2ff" font-family="Arial, sans-serif" font-size="56" font-weight="700">
+      <tspan x="0" y="0">Sistema Inteligente de</tspan>
+      <tspan x="0" y="70">Gestão e Agendamento</tspan>
+    </text>
+    <text x="0" y="130" fill="#93a4c7" font-family="Arial, sans-serif" font-size="23">
+      Agendamento online, área do cliente e painel administrativo.
+    </text>
+    <rect x="0" y="185" width="284" height="68" rx="18" fill="url(#brand)"/>
+    <text x="36" y="228" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700">COMEÇAR AGORA</text>
+    <g transform="translate(0 303)" fill="#aebbd5" font-family="Arial, sans-serif" font-size="18">
+      <circle cx="8" cy="-6" r="8" fill="#36d399"/><text x="27" y="0">Agenda em tempo real</text>
+      <circle cx="248" cy="-6" r="8" fill="#36d399"/><text x="267" y="0">Gestão completa</text>
+    </g>
+  </g>
+
+  <g transform="translate(900 132)" filter="url(#shadow)">
+    <rect width="580" height="610" rx="32" fill="#0d152b" stroke="#283b66" stroke-width="2"/>
+    <rect width="580" height="78" rx="32" fill="#121e39"/>
+    <circle cx="39" cy="39" r="9" fill="#ff637d"/><circle cx="69" cy="39" r="9" fill="#ffd166"/><circle cx="99" cy="39" r="9" fill="#43d49f"/>
+    <text x="144" y="47" fill="#aebbd5" font-family="Arial, sans-serif" font-size="19">Painel Administrativo</text>
+
+    <g transform="translate(30 112)">
+      <rect width="158" height="102" rx="17" fill="#14213e" stroke="#20375f"/>
+      <text x="18" y="31" fill="#8295b9" font-family="Arial, sans-serif" font-size="14">AGENDAMENTOS</text>
+      <text x="18" y="73" fill="#fff" font-family="Arial, sans-serif" font-size="35" font-weight="700">128</text>
+      <rect x="181" width="158" height="102" rx="17" fill="#14213e" stroke="#20375f"/>
+      <text x="199" y="31" fill="#8295b9" font-family="Arial, sans-serif" font-size="14">CLIENTES</text>
+      <text x="199" y="73" fill="#fff" font-family="Arial, sans-serif" font-size="35" font-weight="700">94</text>
+      <rect x="362" width="158" height="102" rx="17" fill="#14213e" stroke="#20375f"/>
+      <text x="380" y="31" fill="#8295b9" font-family="Arial, sans-serif" font-size="14">FATURAMENTO</text>
+      <text x="380" y="73" fill="#fff" font-family="Arial, sans-serif" font-size="27" font-weight="700">R$ 8,4K</text>
+    </g>
+
+    <g transform="translate(30 244)">
+      <rect width="520" height="195" rx="20" fill="#111c36" stroke="#20375f"/>
+      <text x="22" y="36" fill="#dce8ff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Visão geral da semana</text>
+      <path d="M28 154C90 146 120 91 176 110s82 43 135-8 105-36 181-74" fill="none" stroke="url(#brand)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M28 168h464M28 124h464M28 80h464" stroke="#253757" opacity=".75"/>
+    </g>
+
+    <g transform="translate(30 468)">
+      <rect width="520" height="111" rx="20" fill="#111c36" stroke="#20375f"/>
+      <text x="22" y="34" fill="#dce8ff" font-family="Arial, sans-serif" font-size="17" font-weight="700">Próximos horários</text>
+      <rect x="22" y="55" width="98" height="35" rx="10" fill="#172a4c"/><text x="39" y="78" fill="#6ed2ff" font-family="Arial, sans-serif" font-size="15">09:30</text>
+      <rect x="136" y="55" width="98" height="35" rx="10" fill="#172a4c"/><text x="153" y="78" fill="#6ed2ff" font-family="Arial, sans-serif" font-size="15">10:15</text>
+      <rect x="250" y="55" width="98" height="35" rx="10" fill="#2c2053"/><text x="267" y="78" fill="#bfa4ff" font-family="Arial, sans-serif" font-size="15">13:00</text>
+      <rect x="364" y="55" width="98" height="35" rx="10" fill="#2c2053"/><text x="381" y="78" fill="#bfa4ff" font-family="Arial, sans-serif" font-size="15">14:30</text>
+    </g>
+  </g>
+</svg>

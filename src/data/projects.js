@@ -41,7 +41,9 @@ export const projects = [
     // TODO: substitua pela screenshot real do projeto
     image: '/assets/projects/desu-burguer.jpg',
     liveUrl: 'https://joaofelipe74.github.io/desu-burgue/', // TODO: link real do projeto
-    device: 'mobile',
+    device: 'desktop',
+    imageFit: 'contain',
+    screenRatio: '1894 / 917',
   },
   {
     id: 'estudio-fabricio-sardeli',
@@ -53,6 +55,20 @@ export const projects = [
   image: '/assets/projects/estudio-fabricio-sardeli.jpg',
   liveUrl: 'https://joaofelipe74.github.io/estudio-fabricio-sardeli/',
   device: 'desktop',
+  },
+
+  {
+    id: 'sistema-agendamento',
+    title: 'Sistema de Gestão e Agendamento',
+    category: 'Sistema Web Full Stack',
+    description:
+      'Agendamento online com escolha de serviço, profissional e horário, área do cliente e painel administrativo para organizar a rotina do negócio.',
+    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+    image: '/assets/projects/sistema-agendamento.svg',
+    liveUrl: 'https://jf-dev-system-number-one-two.vercel.app/',
+    device: 'desktop',
+    imageFit: 'contain',
+    screenRatio: '16 / 9',
   },
 
   // 👇 Exemplo de como adicionar um novo projeto no futuro:S
